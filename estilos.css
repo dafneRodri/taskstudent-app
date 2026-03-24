@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #0a0a0a;
+    color: #00fff7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor */
+.app {
+    background: #111;
+    padding: 20px;
+    border-radius: 15px;
+    width: 350px;
+    box-shadow: 0 0 20px #00fff7;
+}
+
+/* Input */
+.top {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #00fff7;
+    background: #000;
+    color: #00fff7;
+    outline: none;
+}
+
+input::placeholder {
+    color: #00fff7aa;
+}
+
+input:focus {
+    box-shadow: 0 0 8px #00fff7;
+}
+
+/* Botón */
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #00fff7;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    box-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7;
+}
+
+/* Lista */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+li {
+    background: #1a1a1a;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #00fff7;
+    transition: 0.3s;
+}
+
+/* Hover */
+li:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px #00fff7;
+}
+
+/* Completada */
+.hecho {
+    text-decoration: line-through;
+    color: #777;
+}
+
+/* Botón eliminar */
+.eliminar {
+    background: #ff0055;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.eliminar:hover {
+    box-shadow: 0 0 10px #ff0055;
+}

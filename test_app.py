@@ -21,7 +21,7 @@ def eliminar(index):
     return False
 
 
-#   PRUEBAS
+#   Pruebas
 
 print("---- INICIANDO TEST ----")
 

@@ -41,13 +41,13 @@ function render() {
             li.classList.add("hecho");
         }
 
-        li.innerHTML =´
+        li.innerHTML =`
             <div class="acciones">
                 <button class="check" onclick="toggle(${index})">✔</button>
                 <span>${tarea.texto}</span>
             </div>
             <button class="eliminar" onclick="eliminar(${index})">X</button> 
-         ´;
+         `;
 
         lista.appendChild(li);
     });

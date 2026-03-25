@@ -1,20 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>TaskStudent Pro</title>
-<link rel="stylesheet" href="estilos.css">
+    <meta charset="UTF-8">
+    <title>TaskStudent App</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+
 <div class="app">
-<h1>🧠 Mis pendientes</h1>
-<div class="top">
-<input type="text" id="inputTarea" placeholder="¿Qué tienes que hacer?">
-<button onclick="agregar()">+</button>
+
+    <h1> TaskStudent</h1>
+
+    <!-- Input -->
+    <div class="top">
+        <input type="text" id="inputTarea" placeholder="Escribe una tarea...">
+        <button onclick="agregar()">Agregar</button>
+    </div>
+
+    <!-- Filtros -->
+    <div class="filtros">
+        <button onclick="filtrar('todas')">Todas</button>
+        <button onclick="filtrar('pendientes')">Pendientes</button>
+        <button onclick="filtrar('completadas')">Completadas</button>
+    </div>
+
+    <!-- Lista -->
+    <ul id="lista"></ul>
+
+    <!-- Mensaje vacío -->
+    <p id="vacio">No hay tareas aún 👀</p>
+
+    <!-- Footer -->
+    <div class="footer">
+        <span id="contador">0 tareas</span>
+        <button onclick="limpiar()">Limpiar todo</button>
+    </div>
+
 </div>
-<p id="contador">Tareas: 0</p>
-<ul id="lista"></ul>
-</div>
+
 <script src="tareas.js"></script>
+
 </body>
 </html>

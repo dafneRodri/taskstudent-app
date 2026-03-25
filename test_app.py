@@ -1,20 +1,44 @@
-def test_agregar():
-    print("✔ Test agregar tarea OK")
+# Simulación de pruebas de la app de tareas
 
-def test_eliminar():
-    print("✔ Test eliminar tarea OK")
+tareas = []
 
-def test_completar():
-    print("✔ Test completar tarea OK")
+def agregar(texto):
+    if texto.strip() == "":
+        return False
+    tareas.append({"texto": texto, "hecho": False})
+    return True
+
+def completar(index):
+    if index < len(tareas):
+        tareas[index]["hecho"] = True
+        return True
+    return False
+
+def eliminar(index):
+    if index < len(tareas):
+        tareas.pop(index)
+        return True
+    return False
 
 
-def ejecutar_tests():
-    print("=== INICIANDO PRUEBAS ===")
-    test_agregar()
-    test_eliminar()
-    test_completar()
-    print("=== TODAS LAS PRUEBAS FINALIZADAS ===")
+#   PRUEBAS
 
+print("---- INICIANDO TEST ----")
 
-if __name__ == "__main__":
-    ejecutar_tests()
+# Test 1: agregar tarea válida
+resultado = agregar("Estudiar")
+print("Agregar tarea:", "OK" if resultado else "FAIL")
+
+# Test 2: agregar tarea vacía
+resultado = agregar("")
+print("No permitir vacío:", "OK" if not resultado else "FAIL")
+
+# Test 3: completar tarea
+resultado = completar(0)
+print("Completar tarea:", "OK" if resultado and tareas[0]["hecho"] else "FAIL")
+
+# Test 4: eliminar tarea
+resultado = eliminar(0)
+print("Eliminar tarea:", "OK" if resultado and len(tareas) == 0 else "FAIL")
+
+print("---- FIN DEL TEST ----")

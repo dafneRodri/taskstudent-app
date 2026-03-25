@@ -52,7 +52,7 @@ function render() {
         lista.appendChild(li);
     });
 
-    contador.textContent = ${tareas.length} tareas;
+    contador.textContent = ´${tareas.length} tareas´;
 }
 
 function toggle(index) {
